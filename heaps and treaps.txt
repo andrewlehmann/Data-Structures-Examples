@@ -1,0 +1,15 @@
+Treaps
+
+- BST built from inserts of n nodes ahving random-ordered keys stays well balanced and thus has near-minimum height, meaning searches, inserts, and deletes are all O(log(n)).
+-A treap uses a main key that maintains a bst ordering property, and a secondary key generated randomly, often called Priority during insertions that maintains a heap property. 
+
+-A treap search is the same as a BST search.
+
+-A treap insert initially inserts a node as in a BST, then assigns a random priority to the node, and percolates the node up until the heap property is not violated. In a heap, a node is moved up via rotation rather than a swap. 
+
+-A treap delete is done by setting node's priority such that it should be a leaf, percolating it down using rotations until it becomes a leaf, then removing it.
+
+Heaps
+
+- A max-heap is a binary tree that maintains the simple property that a node's key is greater than or equal to the node's childrens' keys. 
+-A max-heap's root always has the maximum key in the entire tree.

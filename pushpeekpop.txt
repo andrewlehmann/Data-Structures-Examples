@@ -1,0 +1,22 @@
+void LinkedStack::push(int newEntry)	{
+	Node* newNode = new Node;
+	newNode->data = newEntry;
+	newNode->next = topNode;
+	topNode = newNode;
+}
+int LinkedStack::peek()	{
+	int top = -999;
+	if(topNode != null)
+		top = topNode->data;
+	return top;
+}
+int LinkedStack::pop()	{
+	int top = peek();
+	Node* currentNode;
+	if(topNode != NULL)	{
+		currentNode = topNode;
+		topNode = topNode->next;
+		delete currentNode;
+	}
+	return top;
+}
