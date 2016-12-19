@@ -1,0 +1,33 @@
+Big O Notation
+ - Used to classify algorithms by how they respond to changes in input size, such as how the processing time changes in response to changes in input size
+ - characterizes functions in accordance to their growth rate
+ 
+ - O(1) describes an algorithm that will always execute in the same time regardless of the size of the data input set
+	//EXAMPLE
+		bool isFirstElementNull (list[] elements)
+		{
+			return elements[0] == null;
+		}
+- O(N) describes an algoritm whose performance will grow linearly/in direct proportion to the size of the input data set.
+- It is good for worst-case performance scenario, Big O notation will assume the upper limit where the algorithm would perform the maximum number of iterations.
+	//EXAMPLE
+		bool containsValue(list[] elements, int value)
+		{
+			for each element in elements
+			{
+				if (element == value) return true;
+			}
+			return false;
+		}
+		
+-O(N^2) represents an algorithm whose performance is directly proportional to the square of the size of the input data set. Common w/ algorithms that involve nested iterations over a data set.	
+
+-O(2^N) describes an algorithm whose growth doubles with each addition to the data set. the growth curve is exponential. An example is the recursive calculation of Fibonacci numbers.
+
+-Logarithms - O(log N) - The iterative of halving of data sets as done by binary search produces a growth curve that peaks in the beginning, then slowly flattens out as the size of the dat set increases. This makes algorithms such as binary search extremely efficient when dealing with large data sets.
+
+Big O Notation of composite Functions
+
+g(x) * O(f(x)) = O(g(x) * O(f(x)))
+g(x) + O(f(x)) = O(g(x) + O(f(x)))
+

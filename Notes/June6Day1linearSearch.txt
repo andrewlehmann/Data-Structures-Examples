@@ -1,0 +1,45 @@
+June 6, 2016
+Class 1 
+
+-LINEAR SEARCH-
+
+boolean linearSearch(int[] myArray, int first, int last, int key)
+{
+	boolean found = false;
+	//fill this
+}
+
+- Searching an unsorted array based list in java, use equals, will work for any object
+public boolean contains(T anEntry, int length, T[]list)
+{
+	boolean found = false;
+	for (int index = 0; 
+	//unfinished
+}
+- can also use search recusrively
+
+-------------------------PSEUDOCODE-----------------------------
+	//function named "search"
+	Algorithm to search a [first]
+		through a[last] for desiredItem
+	if(there are no elements to search)
+		return false
+	else if (desiredItem equals a [first])
+		return true
+	else
+		return the result of search a[first + 1] through a[last]
+---------------------------------------------------------------
+- BINARY SEARCH -
+	-Ignoring one-half of the data when the data is sorted
+	-recursive - need to figure out if we need to recursively search either the lower half or the upper half
+JCL - java class library
+--------------------------------------
+-In a linked-based list (recursive)
+	Note currentNote = firstNote;
+	while ((currentNote != null) &&
+		(anEntry.compareTo (currentNote.getData()) > 0))
+	//incomplete code
+	else
+		found = search(currentNote.getNextNote (), desiredItem);
+
+

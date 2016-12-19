@@ -1,0 +1,37 @@
+Selection sort:
+
+	for (int i = 0; i < numbersSize; ++i)
+	{
+		indexSmallest = i;
+		for (j = i+1; j < numbersSize; ++j)
+		{
+			if(numbers[j] < numbers[indexSmallest])
+			{
+				indexSmallest = j;
+			}
+		}
+		temp = numbers[i];
+		numbers[i] = numbers[indexSmallest];
+		numbers[indexSmallest] = temp;
+	}
+
+Call: SelectionSort(numbers, NUMBERS_SIZE);
+--------------------------------------------------------------------------------
+
+Insertion sort:
+	for (int i = 1; i < numbersSize; ++i)
+	{
+		j = i;
+		while(j > 0 && numbers[j] < numbers[j - 1])
+		{
+			temp = numbers[j];
+			numbers[j] = numbers[j - 1];
+			numbers[j-1] = temp;
+			--j;
+		}
+	}	
+
+Call: insertionSort(numbers, NUMBERS_SIZE);
+	
+
+
