@@ -1,0 +1,49 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution { // keep track of max value while pushing/popping
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int num = in.nextInt();
+        int max = 0;
+        int query = 0;
+        int value = 0;
+        Stack<StackNode> stack = new Stack<StackNode>();
+        
+        for(int i = 0; i < num; i++)    {
+            query = in.nextInt();
+            switch(query)   {
+                
+                case 1:
+                    value = in.nextInt();
+                    max = Math.max(value, max);
+                    stack.push(new StackNode(value, max));
+                    break;
+                case 2:
+                    if (!stack.isEmpty())
+                        stack.pop();
+                    if (stack.isEmpty())
+                        max = 0;
+                    else
+                        max = stack.peek().curMax;
+                    
+                    break;
+                case 3:
+                    System.out.println(stack.peek().curMax);
+                    break;
+            }
+        }
+        in.close();
+    } 
+    private static class StackNode {
+        int value;
+        int curMax;
+        
+        public StackNode(int value, int curMax) {
+            this.value = value;
+            this.curMax = curMax;
+        }
+        
+    } 
+}
